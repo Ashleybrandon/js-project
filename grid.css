@@ -1,0 +1,70 @@
+/* grid.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+html, body {
+    font-size: 15px;
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+@media (min-width:975px) {
+
+.container {width: 100%; height: 100%; padding: 0 2em;}
+
+.row {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1410px;
+    padding: 0.5em 0;
+}
+
+/* clearfix */ 
+.row:before, 
+.row:after {
+    content:"";
+    display: table ;
+    clear:both;
+    }
+
+[class*="col"] {
+        float: left; 
+        min-height: 1px; 
+        width: 16.66%;
+        padding: 0 0.5em;
+        border: 0;
+    }
+
+    .col-1-6{ width: 16.66%; }
+    .col-2-6{ width: 33.33%; }
+    .col-3-6{ width: 50%;    }
+    .col-4-6{ width: 66.66%; }
+    .col-5-6{ width: 83.33%; }
+    .col-6-6{ width: 100%;   }
+
+.pink {background-color: pink;}
+.blue {background-color: blue;}
+
+}
+
+@media (max-width:974px) {
+    
+    .container {width: 100%; height: 100%; padding: 0 1em;}
+    
+    [class*="col"] {
+        min-height: 1px; 
+        width: 100%;
+        padding: 0.5em;
+        border: 0;
+        text-align: center;
+    }
+
+    .pink {background-color: pink;}
+    .blue {background-color: blue;}    
+
+}
