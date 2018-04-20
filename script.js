@@ -48,7 +48,6 @@
         
     }
     */
-   //add class to a div
     document.getElementById('tabSection').classList.add('testClass');
     
     

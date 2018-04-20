@@ -8,10 +8,19 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+
+}
+
+#menuButton {
+    position: absolute;
+    padding: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .mainHeader {
     height: 400px;
+    width: 100%;
     background-color: coral;
 }
 
@@ -27,4 +36,52 @@
 
 #firstSectionTitle {
     text-align: center;
+}
+
+#sideNav {
+    display: none;
+    -webkit-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+
+#tabSection {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#tabSection ul li {
+    display: inline-block;
+}
+
+#navList {
+    list-style: none;
+    padding: 1em;
+}
+
+.tabs {
+    text-align: center;
+    padding: 0;
+}
+
+.tabs li a.active {
+            background-color: #FFFFFF;
+            color: #424242;
+            cursor: default;
+        }
+
+        .tabs li a:hover:not(.active) {
+            background-color: rgba(245, 245, 245, .25);
+            color: #424242;
+        }
+
+    .tab-contents li.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+.tabs li a {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
 }
