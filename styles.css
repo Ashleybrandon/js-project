@@ -50,9 +50,6 @@
     margin: 0 auto;
 }
 
-#tabSection ul li {
-    display: inline-block;
-}
 
 #navList {
     list-style: none;
@@ -62,26 +59,32 @@
 .tabs {
     text-align: center;
     padding: 0;
+} /*
+
+#tabbed-content li {
+    cursor: pointer;
 }
 
-.tabs li a.active {
-            background-color: #FFFFFF;
-            color: #424242;
-            cursor: default;
-        }
+#tabbed-content .panel {
+    display: none;
+}
 
-        .tabs li a:hover:not(.active) {
-            background-color: rgba(245, 245, 245, .25);
-            color: #424242;
-        }
+#tabbed-content .panel.active {
+    display: block;
+} */
+
+   
+
+    .tab-contents li {
+        padding: 2em;
+        opacity: 0;
+        -webkit-transition: opacity .3s ease;
+        transition: opacity .3s ease;
+        pointer-events: none;
+    }
 
     .tab-contents li.visible {
         opacity: 1;
         pointer-events: auto;
     }
-
-.tabs li a {
-    padding: 8px;
-    text-decoration: none;
-    color: black;
-}
+      
