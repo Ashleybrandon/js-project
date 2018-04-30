@@ -60,21 +60,65 @@
 .tabs {
     text-align: center;
     padding: 0;
+    display: block;
 } 
-    .tab-contents li {
+.tab-contents li {
         padding: 2em;
-        opacity: 0;
+        display: none;
         -webkit-transition: opacity .3s ease;
         transition: opacity .3s ease;
         pointer-events: none;
-    }
+}
 
-    .tab-contents li.visible {
+.tab-contents li.visible {
+        display: block;
+        pointer-events: auto;
+}
+
+.tab-contents {
+       text-align: center;
+} 
+      
+.pic-gallery {
+    height: 200px;
+    /* background-image: url(images/meeting-chairs.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.pic-gallery img {
+    height: 200px;
+}
+
+#lightbox-overlay {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(29, 31, 33, .95);
+    transition: opacity .3s ease-in;
+}
+
+    #lightbox-overlay.visibleb {
         opacity: 1;
         pointer-events: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-   .tab-contents {
-       text-align: center;
-   } 
-      
+#lightbox-image {
+    max-height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    background: transparent url("images/loading.gif") 50% 50% no-repeat;
+    text-indent: -99999px;
+}
