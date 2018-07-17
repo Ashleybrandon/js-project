@@ -263,5 +263,47 @@ function moveSlides(direction) {
     }
 }
     
+    
+function Question(question,answers,correct) {
+    this.question = question;
+    this.answers = answers;
+    this.correct = correct;
+}    //constructor, allows easy iteration
+    //prototype that follows is also part of this
+    
+Question.prototype.displayQuestion = function() {
+    console.log(this.question);
+    
+    for (var i = 0; i < this.answers.length; i++) {
+        console.log( i + ': ' + this.answers[i]);
+        //console logs the list of answers i think
+    }
+}
+    
+Question.prototype.checkAnswer =
+    function(ans) {
+    if (ans === this.correct) {
+        console.log('Correct answer!');
+    } else {
+        console.log('Wrong answer. Try again :)');
+    }
+}
+
+//iterations of constructor begin below
+// each of the attributes correspond to .this
+var q1 = new Question('Is JS the best?', ['yea', 'nah'], 0);
+    
+var q2 = new Question('Name the teacher of the course',['john','mike','jonas'], 2);
+    
+var questions = [q1, q2];
+    
+var n = Math.floor(Math.random() * questions.length);
+    
+questions[n].displayQuestion();
+    
+var answer = parseInt(prompt('Please select the correct answer.'));
+    
+questions[n].checkAnswer(answer);    
+    
 })();
 
