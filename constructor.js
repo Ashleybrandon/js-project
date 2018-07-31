@@ -50,13 +50,33 @@ var bleh = new toggle(sideNav);
 
 menuButton.addEventListener('click', toggle); 
 
+
+
+var menuButtons = document.querySelectorAll('.menuButton');
+menuButtons.forEach(function(btn){
+  btn.addEventListener("click", toggle.bind(this, btn.id));
+})
+
+function toggle(id) {
+    var sideNav = document.querySelectorAll('.nav_' + id);
+    sideNav.forEach(function(el){
+      if (el.style.display == 'none'){
+        el.style.display = "block";
+      } else {
+        el.style.display = "none"
+      }
+    })
+}
 */
 
 
-var sideNav = document.getElementById('sideNav');
-var menuButton = document.getElementById('menuButton');
+
 
 function toggle() {
+
+    var sideNav = document.getElementById('sideNav');
+    var menuButton = document.getElementById('menuButton');
+
     if(sideNav.style.display) {
         sideNav.style.display = '';
     } else {
