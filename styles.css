@@ -1,4 +1,8 @@
 
+.see-more, .js__toggle {
+    display: none;
+}
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
